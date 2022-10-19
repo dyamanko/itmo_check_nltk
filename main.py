@@ -12,11 +12,11 @@ bs = BeautifulSoup(html.read(), 'html.parser')
 # get text from html
 text = bs.getText()
 # clear text
-text = re.sub('[!@#$:\-?...]', '', text)
 # get text tokens
 tokens = nltk.word_tokenize(text)
 # pos tokens
 tagged = nltk.pos_tag(tokens)
+print(tagged)
 # get list of tags
 tags_list = []
 for tag in tagged:
