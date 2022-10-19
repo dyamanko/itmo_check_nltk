@@ -20,6 +20,8 @@ tagged = nltk.pos_tag(tokens)
 # get list of tags
 tags_list = []
 for tag in tagged:
-    tags_list.append(tag[1])
+    raw_tag = tag[1]
+    # get first letter of tag type
+    tags_list.append(raw_tag[0])
 # print result(using counter to count tags usage)
 print(Counter(tags_list))
